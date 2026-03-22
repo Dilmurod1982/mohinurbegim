@@ -15,27 +15,27 @@ const resources = {
       },
       hero: {
         title: "Mohinur Lash Studio",
-        subtitle: "Sizning ko'zlarinigiz mukammalligi",
+        subtitle: "Sizning ko'zlaringiz mukammalligi",
         description:
-          "Professional resurslar, eng yuqori sifat va individual yondashuv. Biz sizning go'zalligingizni ta'kidlaymiz.",
+          "Professional kirpik yapıştırma, eng yuqori sifat va individual yondashuv. Biz sizning tabiiy go'zalligingizni ta'kidlaymiz.",
         cta: "Band qilish",
         learnMore: "Batafsil",
       },
       services: {
         title: "Bizning Xizmatlar",
-        subtitle: "Professional resurslar va eng yuqori sifat",
+        subtitle: "Professional kirpik yapıştırma eng yuqori sifatda",
         classic: {
-          title: "Klassik Resurslar",
+          title: "Klassik Kirpiklar",
           description:
-            "Tabiiy va nafis ko'rinish, har bir kirpik uchun bitta sun'iy kirpik",
+            "Tabiiy va nafis ko'rinish, har bir tabiiy kirpik uchun bitta sun'iy kirpik",
         },
         volume: {
-          title: "Volume Resurslar",
+          title: "Volume Kirpiklar",
           description:
             "Hajmli va ifodali ko'rinish, bir nechta yengil sun'iy kirpiklar",
         },
         hybrid: {
-          title: "Gibrid Resurslar",
+          title: "Gibrid Kirpiklar",
           description: "Klassik va volume usullarining kombinatsiyasi",
         },
         mega: {
@@ -50,7 +50,7 @@ const resources = {
       about: {
         title: "Biz Haqimizda",
         description:
-          "Mohinur Lash Studio - bu professional resurslar va individual yondashuv. Biz 5 yildan ortiq tajribaga egamiz va minglab mamnun mijozlarga xizmat ko'rsatganmiz. Bizning maqsadimiz - sizning tabiiy go'zalligingizni ta'kidlash va sizga o'zingizni ishonchli his qilish imkoniyatini yaratish.",
+          "Mohinur Lash Studio - bu professional kirpik yapıştırma va individual yondashuv. Biz 5 yildan ortiq tajribaga egamiz va minglab mamnun mijozlarga xizmat ko'rsatganmiz. Bizning maqsadimiz - sizning tabiiy go'zalligingizni ta'kidlash va sizga o'zingizni ishonchli his qilish imkoniyatini yaratish.",
         experience: "Yillik Tajriba",
         clients: "Mamnun Mijozlar",
         masters: "Professional Ustalar",
@@ -96,17 +96,17 @@ const resources = {
         title: "Наши Услуги",
         subtitle: "Профессиональное наращивание ресниц высочайшего качества",
         classic: {
-          title: "Классическое наращивание",
+          title: "Классические ресницы",
           description:
             "Естественный и элегантный вид, одна искусственная ресница на каждую натуральную",
         },
         volume: {
-          title: "Объемное наращивание",
+          title: "Объемные ресницы",
           description:
             "Объемный и выразительный взгляд, несколько легких искусственных ресниц",
         },
         hybrid: {
-          title: "Гибридное наращивание",
+          title: "Гибридные ресницы",
           description: "Комбинация классического и объемного методов",
         },
         mega: {
@@ -224,7 +224,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en",
+    lng: "uz", // Устанавливаем узбекский язык по умолчанию
+    fallbackLng: "uz", // Если перевода нет, используем узбекский
+    detection: {
+      // Отключаем автоматическое определение языка браузера
+      order: [],
+      caches: [],
+    },
     interpolation: {
       escapeValue: false,
     },

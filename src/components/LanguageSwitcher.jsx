@@ -17,6 +17,10 @@ const LanguageSwitcher = ({ isScrolled }) => {
     i18n.changeLanguage(langCode);
   };
 
+  // Определяем активный язык для отображения
+  const activeLanguage =
+    languages.find((l) => l.code === currentLang) || languages[0];
+
   return (
     <div className="relative group">
       <button
@@ -26,9 +30,7 @@ const LanguageSwitcher = ({ isScrolled }) => {
             : "text-white hover:text-primary"
         }`}
       >
-        <span className="font-medium">
-          {languages.find((l) => l.code === currentLang)?.label}
-        </span>
+        <span className="font-medium">{activeLanguage.label}</span>
         <svg
           className="w-4 h-4"
           fill="none"
@@ -45,18 +47,19 @@ const LanguageSwitcher = ({ isScrolled }) => {
       </button>
 
       <div className="absolute top-full right-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden min-w-[120px]">
+        <div className="bg-white rounded-lg shadow-xl overflow-hidden min-w-[140px]">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => changeLanguage(lang.code)}
-              className={`w-full px-4 py-2 text-left hover:bg-accent transition-colors ${
+              className={`w-full px-4 py-2.5 text-left hover:bg-accent transition-colors ${
                 currentLang === lang.code
                   ? "text-primary font-semibold bg-accent"
                   : "text-gray-700"
               }`}
             >
-              {lang.name}
+              <span className="inline-block w-8 font-medium">{lang.label}</span>
+              <span className="ml-2">{lang.name}</span>
             </button>
           ))}
         </div>
