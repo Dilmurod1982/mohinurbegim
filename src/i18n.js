@@ -14,7 +14,7 @@ const resources = {
         contact: "Aloqa",
       },
       hero: {
-        title: "Mohinur Lash Studio",
+        title: "Mohinur Lashes Studio",
         subtitle: "Sizning ko'zlaringiz mukammalligi",
         description:
           "Professional kirpik yapıştırma, eng yuqori sifat va individual yondashuv. Biz sizning tabiiy go'zalligingizni ta'kidlaymiz.",
@@ -85,7 +85,7 @@ const resources = {
         contact: "Контакты",
       },
       hero: {
-        title: "Mohinur Lash Studio",
+        title: "Mohinur Lashes Studio",
         subtitle: "Совершенство ваших глаз",
         description:
           "Профессиональное наращивание ресниц, высочайшее качество и индивидуальный подход. Мы подчеркиваем вашу естественную красоту.",
@@ -156,7 +156,7 @@ const resources = {
         contact: "Contact",
       },
       hero: {
-        title: "Mohinur Lash Studio",
+        title: "Mohinur Lashes Studio",
         subtitle: "Perfection for Your Eyes",
         description:
           "Professional eyelash extensions, highest quality, and personalized approach. We enhance your natural beauty.",
